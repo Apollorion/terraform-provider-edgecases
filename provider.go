@@ -8,7 +8,8 @@ import (
 func Provider() *schema.Provider {
 	return &schema.Provider{
 		ResourcesMap: map[string]*schema.Resource{
-			"edgecases_die_during": dieDuring(),
+			"edgecases_die_during":     dieDuring(),
+			"edgecases_kill_terraform": killTerraform(),
 		},
 	}
 }
