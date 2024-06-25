@@ -61,7 +61,7 @@ func killTerraformProcess() error {
 	scanner := bufio.NewScanner(strings.NewReader(string(out)))
 	for scanner.Scan() {
 		scanText := scanner.Text()
-		if strings.Contains(scanText, "terraform") || strings.Contains(scanText, "opentofu") {
+		if strings.Contains(scanText, "terraform") || strings.Contains(scanText, "tofu") {
 			line = scanText
 			break
 		}
