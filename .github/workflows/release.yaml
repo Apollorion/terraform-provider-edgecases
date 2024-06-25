@@ -41,7 +41,7 @@ jobs:
         # We will only run GoReleaser when a tag is pushed. Semantic versioning
         # is required, but build metadata is not supported.
         if: startsWith(github.ref, 'refs/tags/')
-        uses: goreleaser/goreleaser-action@v5
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
           args: release --clean
